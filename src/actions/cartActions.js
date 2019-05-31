@@ -8,7 +8,7 @@ import {
 } from './types';
 
 export const useCartActions = ({ productState, cartState }, dispatch) => {
-  // Get item by id
+  // Ziskani product ID
   const getItem = id => productState.products.find(item => item.id === id);
 
   const addItemToCart = id => {
@@ -57,7 +57,7 @@ export const useCartActions = ({ productState, cartState }, dispatch) => {
   const clearCart = cart => {
     dispatch({ type: CLEAR_CART });
     addTotals();
-    // Cheating because it's referencing product state objects directly
+   
     cart.forEach(item => {
       item.inCart = false;
       item.count = 0;
@@ -65,7 +65,7 @@ export const useCartActions = ({ productState, cartState }, dispatch) => {
     });
   };
 
-  // Incrementing/Decrementing values in the cart
+  // Přidávání a odebírání věcí v košíku
   const inc = id => {
     let tempCart = [...cartState.cart];
     const selectedProduct = tempCart.find(item => item.id === id);
