@@ -1,7 +1,7 @@
 import { OPEN_MODAL, CLOSE_MODAL } from './types';
 
 export const useModalActions = (productState, dispatch) => {
-  // Get item by id
+  // Získání ID
   const getItem = id => productState.products.find(item => item.id === id);
 
   const openModal = id => {
