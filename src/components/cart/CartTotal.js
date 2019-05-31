@@ -10,6 +10,7 @@ export default function CartTotal({ cartState, cartActions }) {
     addTotals();
   }, [subtotal]);
   return (
+    <React.Fragment>
     <div className="container">
       <div className="row">
         <div className="col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 text-capitalized text-right">
@@ -34,9 +35,10 @@ export default function CartTotal({ cartState, cartActions }) {
             <span className="text-title">Total: </span>
             <strong>${total}</strong>
           </h5>
-          <PayPalButton ></PayPalButton>
+          <PayPalButton total={CartTotal} clearCart={clearCart} history={History}/>
         </div>
       </div>
     </div>
+    </React.Fragment>
   );
 }
