@@ -5,7 +5,7 @@ import PayPalButton from "./PayPalButton";
 export default function CartTotal({ cartState, cartActions }) {
   const { cart, subtotal, tax, total } = cartState;
   const { addTotals, clearCart } = cartActions;
-  // Updating Total value
+  
   useEffect(() => {
     addTotals();
   }, [subtotal]);
