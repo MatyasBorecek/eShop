@@ -9,7 +9,7 @@ import {
 } from '../../../global-state';
 
 export default function Details() {
-  // Accesing state and actions
+  // Přístup k STATEs a ACTIONs
   const { productState } = useProductState();
   const { productDetails } = productState;
   const { cartActions } = useCartState();
@@ -20,13 +20,13 @@ export default function Details() {
   const { id, title, img, price, company, info, inCart } = productDetails;
   return (
     <div className="container py-5">
-      {/* Product Title */}
+      {/*Title*/}
       <div className="row">
         <div className="col-10 mx-auto text-center text-blue my-5">
           <h1>{title}</h1>
         </div>
       </div>
-      {/* End Product Title  */}
+      {/* End Title  */}
       {/* Product Info */}
       <div className="row">
         {/* Product Image */}
