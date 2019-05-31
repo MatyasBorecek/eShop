@@ -10,7 +10,7 @@ export default function Modal() {
   const { modalOpen, modalProduct } = modalState;
   const { closeModal } = modalActions;
   const { img, title, price } = modalProduct;
-  // If Modal is closed don't display anything
+ 
   if (!modalOpen) return null;
   return (
     <ModalContainer>
